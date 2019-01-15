@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang= 0 ><head><style>body{font-family:Tahoma, Geneva, sans-serif; margin-left:100px; margin-right:100px; margin-top:50px;margin-bottom:50px;}</style>
+<title>Assignment</title></head><body>
+<style>
+h1.ee{color:#003399; text-align:left; border-bottom-style:solid; font-size:40px;}
+h2.ee{color:#555555; text-align:left; border-bottom-style:solid;}
+p.ee{ line-height:150%; font-size:20px;}
+table.ee{border-collapse:collapse; border: 1px solid black; }
+th.ee{padding:5px;border: 1px solid black;background-color:#003399; color:white; }
+th.ee2{text-align:left; padding:5px;border: 0px solid black; background-color:#EEEEEE;color:#666666;font-weight:normal; }
+th.ee1{padding:5px;border: 1px solid black;background-color:#AAAAAA; color:white; }
+td.ee{padding:10px; border: 1px solid black;}
+td.task{font-weight:bold; text-align:center;border: 1px solid black;}
+td.points{ text-align:center;}
+td.taskDone{font-weight:bold; text-align:center;background-color:#cccccc;padding:10px; border: 1px solid black;}
+.eeerror{ color:#800000;margin-left: 10px;}
+.comment{ color:#444444;margin-left: 10px;}
+</style>
+<h1 class=ee>Fallen Angel</h1>
+<p class=ee>This assignment has a total of 40 points.</p>
+<p class=ee>Follow the instructions below precisely.&nbsp;&nbsp;The grader will rely on your answer being in the specified location.</p>
+<h2 class=ee>Recording and Editing Macros</h2>
+<p class=ee>Ben Grahm has been called the "father of financial analysis." Among the "hurdles" he used to consider whether to invest in a stock was one that he used to identify "fallen angels." To clear this hurdle, a company should currently have a P/E ratio of less than half of the highest P/E ratio it has had in the last five years.<br>In this project, you will record a macro to modify a webquery to retrieve the needed information to tell if a given stock is a fallen angel.&nbsp;&nbsp;Your macro will also flag those tickers that are fallen angels.&nbsp;&nbsp;Additionally, you&nbsp;&nbsp;will write a loop so that the information will be gathered for each ticker listed contiguously in the below the&nbsp;&nbsp;"Stock" heading in the sheet named "Fallen Angel".&nbsp;&nbsp;&nbsp;&nbsp;The following URL provides the Current PE Ratio and the 5 year high PE Ratio:<br><br>https://ycharts.com/companies/GOOG/pe_ratio<br><br>You may use a differnt URL for this assignment, this is just one of many possibilities.</p>
+<table class=ee><table class=ee><tr><th class=ee>Task&nbsp;#</th><th class=ee>Points</th><th class=ee>Task Description</th></tr>
+<tr><td class="task">1</td><td class="ee points">
+2</td><td class=ee>
+Create a worksheet named "WebQuery" (without the quotes).&nbsp;&nbsp;Please note that there is no space in the sheet name.
+</td></tr>
+<tr><td class="task">2</td><td class="ee points">
+2</td><td class=ee>
+Create a Web Query on the "webQuery" sheet that gets the current P/E ratio and the 5-year high PE ratio.&nbsp;&nbsp;Of course, it can retrieve other information as well.&nbsp;&nbsp;The web query must exist before your solution is run.&nbsp;&nbsp;Do not have&nbsp;&nbsp;your code create the web query.
+</td></tr>
+<tr><td class="task">3</td><td class="ee points">
+3</td><td class=ee>
+Record a macro that updates the Web Query to bring information for a particular ticker and reports either "Yes" or "No" in column E of the Fallen Angel sheet.&nbsp;&nbsp;Name the macro "getFallenAngelData".&nbsp;&nbsp; (You can either name the macro this when you record it or you can change the name or the recorded sub procedure to "getFallenAngelData" after you have recorded correctly.)&nbsp;&nbsp;After it has been recoded, move it from the module that was created to hold the newly recoded macro to the module named "Solution."&nbsp;&nbsp;It is important that your recorded macro is named "getFallenAngelData" and that it is located in the "Solution" module for the grader to evaluate it correctly.<br><br>This macro should work indepenently of your whole solution to bring in the information and decide if a stock is a fallen angel.&nbsp;&nbsp;That is, when the macro named "getFallenAngelData" is executed, it should read the stock ticker from the active cell and print the current P/E Ratio, the five-year-high P/E Ratio and a "Yes" or "No" value indicating if it is a fallen angel in the three cells immediately to the right.<br><br>Warning: Be sure you don't end up with more than one sub procedure with the same name in the project.&nbsp;&nbsp;If you record the macro and decide to copy it to a different module, be sure to delete it from its original location.
+</td></tr>
+<tr><td class="task">4</td><td class="ee points">
+9</td><td class=ee>
+Modify the macro that was recorded such that it will retrieve the correct information for the ticker symbol in the active cell.
+</td></tr>
+<tr><td class="task">5</td><td class="ee points">
+24</td><td class=ee>
+Add code to the subprocedure named "processFallenAngel" in the "Solution" module so that when the user clicks the "Process Tickers" button on the "Homework" tab of the ribbon, the information for all stock ticker symbols located contiguously below cell B3 on the Fallen Angel sheet is retrieved and each is marked with a "Yes" or "No" in the "Fallen Angel" column.<br><br>Note: Some stock tickers do not have all information available.&nbsp;&nbsp;For this assignment, you can choose to use only tickers that do have all information available.
+</td></tr>
+
+</table>
+
+</body></html>
