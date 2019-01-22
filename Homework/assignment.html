@@ -12,21 +12,22 @@ td.ee{padding:10px; border: 1px solid black;}
 td.task{font-weight:bold; text-align:center;border: 1px solid black;}
 td.points{ text-align:center;}
 td.taskDone{font-weight:bold; text-align:center;background-color:#cccccc;padding:10px; border: 1px solid black;}
-.eeerror{ color:#800000;margin-left: 10px;}
-.comment{ color:#444444;margin-left: 10px;}
+.eeerror{ color:#800000;}
 </style>
-<h1 class=ee>Create a Web Query</h1>
+<h1 class=ee>Conditional Execution</h1>
 <p class=ee>This assignment has a total of 10 points.</p>
-<p class=ee>Follow the instructions below precicely.  The grader will rely on your answer being in the specified location.</p>
-<p class=ee>This assignment does not require any VBA to be written.  It is only an exercise in using built-in Excel functionality.</p>
-<h2 class=ee>Web Query</h2>
-<p class=ee>The Web Query Wizard is a tool that allows you to build a web query. In Excel, a web query can be configured to automatically request specific information from a web server. To start the Web Query Wizard, select the "Data" tab of the ribbon. Then in the left most group, select the "From Web" button. If you need more guidance on how to build a web query, Google is your friend.</p>
+<p class=ee>Follow the instructions below precisely.  The grader will rely on your answer being in the specified location.</p>
+<h2 class=ee>Loops and Conditions</h2>
+<p class=ee>On the assignment tab in the ribbon of this workbook, there is a button named "Highlight Row".  Once you have completed this assingment, this button will allow you to test your solution.  </p>
 <table class=ee><table class=ee><tr><th class=ee>Task&nbsp;#</th><th class=ee>Points</th><th class=ee>Task Description</th></tr>
 <tr><td class="task">1</td><td class="ee points">
 10</td><td class=ee>
-Create a web query to retreive a quote from the founding fathers from the following website:<br><br>https://founding-quotes.blogspot.com/<br><br>This site displays a randomly selected quote on each request.&nbsp;&nbsp;Accordingly, your workbook should show a new quote each time the web query is refreshed.<br><br>Your web query should return the quote data into the range A1:A5.<br><br>Change the name of the worksheet to&nbsp;&nbsp;"Quotes"<br><br>You do not need to write any VBA for this assignment, you are only making a web query.
+In the "rowColorSwitcher-XX.xlsm" workbook, you will find a module named "Solution."&nbsp;&nbsp;In it, there is a subprocedure named "highlightRow."&nbsp;&nbsp;Modify that sub procedure so that when it is executed, the entire row of the worksheet with the active cell is highlighted—that is, the background color of all the cells on the row is changed.&nbsp;&nbsp;Your solution should highlight the whole row, even blank cells on the row.&nbsp;&nbsp;Use the "colorindex" property of the "Interior" object to effect the change.&nbsp;&nbsp;The first time the "highlightRow" sub procedure is called on a row, it should set the background color of the whole row to have a colorIndex of one of the following numbers: 3, 4, 6, 7, 8, -4142.&nbsp;&nbsp;The value of -4142 is a special value that indicates no background color at all.&nbsp;&nbsp;Regardless of the background color of the active cell, when the "highlightRow" sub procedure is called, it should change the background colorIndex of the entire row to one of the six valid numbers (3, 4, 6, 7, 8, -4142).<br><br>So, if a user clicks the button in the ribbon that calls the "highlightRow" sub procedure six times without changing the active cell, that row's background color should have shown all six different colors once.&nbsp;&nbsp;If the user clicks again, it should change the color back to one of the six it has already shown.<br><br>Some students are tempted to use a loop in the creation of their solutions; however, each time the user clicks the "Highlight Row" button, only one color should be shown, so it is unlikely that a loop will help.
 </td></tr>
-
+<tr><td class=ee>Total:</td><td class="ee points">
+10
+</td><td class=ee>
+</td></tr>
 </table>
 
 </body></html>
