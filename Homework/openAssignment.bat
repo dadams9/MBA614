@@ -1,1 +1,1 @@
-start https://www.myeducator.com/course/activity/2033616471878672385/2033616546766266369/2044504401678802945
+start D:\Documents_D\School\MBA\MBA_614\MBA614_GitHub\Homework\assignment.html
