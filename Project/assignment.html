@@ -14,24 +14,72 @@ td.points{ text-align:center;}
 td.taskDone{font-weight:bold; text-align:center;background-color:#cccccc;padding:10px; border: 1px solid black;}
 .eeerror{ color:#800000;}
 </style>
-<h1 class=ee>Working with Arrays</h1>
-<p class=ee>This assignment has a total of 80 points.</p>
-<p class=ee>Follow the instructions below precisely.  The grader will rely on your answer being in the specified location.</p>
-<h2 class=ee>Big Boggle</h2>
-<p class=ee>Big Boggle is a word-discovery game originally produced by Parker Brothers (Google "big boggle rules" for details of game play). In play, the user is presented with a randomly-ordered 5 by 5 grid of cubes--each with one face showing. The goal is to find as many words (subject to the game rules) as possible in a three minute round.  Full instructions are online at: http://www.hasbro.com/common/instruct/BigBoggle.PDF
+<h1 class=ee>Working with User Forms</h1>
+<p class=ee>This assignment has a total of 90 points.</p>
+<p class=ee>Follow the instructions below precisely.  The grader will rely on your answer being in the specified location.  Do not modify the names of the controls on the forms.</p>
+<h2 class=ee>Colonial Volunteers</h2>
+<p class=ee>The Colonial Heritage Festival is the largest American Colonial life and re-enactment event in the western United States.  With exhibits from more than 100 artisans, educators, and re-enactors, the event attracts more than 50,000 visitors annually (see http://festival.colonialheritage.org).  
 
-You can see a video of how Boggle is played at http://www.youtube.com/watch?v=ntZVkJEArEg.  This video is for the regular Boggle (16 letter cubes) however, you assignment is for Big Boggle (25 letter cubes).</p>
+The Colonial Heritage Foundation relies heavily on volunteers for the event’s staffing needs.  People who have an interest in helping are assigned to specific areas in one of three shifts on each day of the event.  The workbook that forms the foundation of this assignment is used for updating volunteer information and for assigning volunteers to shifts for the event.
+
+In this assignment, you will add code to an existing user form make it easier for a user to update volunteer information and to provide data validation to ensure the quality of the data entered.
+
+Note:  Do not use the VBA statement "End" in any part of your code.  This statement will interrupt the grader and prevent your submission from being completed.</p>
 <table class=ee><table class=ee><tr><th class=ee>Task&nbsp;#</th><th class=ee>Points</th><th class=ee>Task Description</th></tr>
 <tr><td class="task">1</td><td class="ee points">
-10</td><td class=ee>
-In the bigBiggle-XX.xlsm workbook, you will find a module named Solution.&nbsp;&nbsp;Create your solution in the subprocedure named "BigBoggle"<br><br>For this assignment, you must use Excel to simulate the part of the game that selects the letters that will show for a given round. There are 25 letter cubes and one face from each must show in each game.&nbsp;&nbsp;Although the game has had various distributions of letters over the years, in this assignment you will use the original cube structure, which follows:
-<br><br><style> td.ee1{padding:2px; border: 1px solid black;} </style><center><style> td.ee1{padding:2px; border: 1px solid black;}</style><table class=ee><tr><td class=ee1 align=center valign=bottom>AFIRSY</td><td class=ee1 align=center valign=bottom>ADENNN</td><td class=ee1 align=center valign=bottom>AEEEEM</td><td class=ee1 align=center valign=bottom>AAAFRS</td><td class=ee1 align=center valign=bottom>AEGMNN</td></tr><tr><td class=ee1 align=center valign=bottom>AAEEEE</td><td class=ee1 align=center valign=bottom>AEEGMU</td><td class=ee1 align=center valign=bottom>AAFIRS</td><td class=ee1 align=center valign=bottom>BJKQXZ</td><td class=ee1 align=center valign=bottom>CCENST</td></tr><tr><td class=ee1 align=center valign=bottom>CEILPT</td><td class=ee1 align=center valign=bottom>CEIILT</td><td class=ee1 align=center valign=bottom>CEIPST</td><td class=ee1 align=center valign=bottom>DHLNOR</td><td class=ee1 align=center valign=bottom>DHLNOR</td></tr><tr><td class=ee1 align=center valign=bottom>DDHNOT</td><td class=ee1 align=center valign=bottom>DHHLOR</td><td class=ee1 align=center valign=bottom>ENSSSU</td><td class=ee1 align=center valign=bottom>EMOTTT</td><td class=ee1 align=center valign=bottom>EIIITT</td></tr><tr><td class=ee1 align=center valign=bottom>FIPRSY</td><td class=ee1 align=center valign=bottom>GORRVW</td><td class=ee1 align=center valign=bottom>IPRRRY</td><td class=ee1 align=center valign=bottom>NOOTUW</td><td class=ee1 align=center valign=bottom>OOOTTU</td></tr></table></center></td></tr>
+2</td><td class=ee>
+In the ribbon of the workbook, you will find a tab named "Colonial Heritage."&nbsp;&nbsp;On that tab, there is a button labeled "Edit."&nbsp;&nbsp;This button is already programmed to open the form named "frmVolunteer." <br><br> Modify the form so that the title bar reads "Edit Volunteer Information" instead of "UserForm1."<br>
+<br><center><img src=caption.gif></center></td></tr>
 <tr><td class="task">2</td><td class="ee points">
-70</td><td class=ee>
-So, each of the 25 cubes has 6 letters, the first has the letters A, F, I, R, S, and Y on the cube. On any given round, exactly one of the faces of each cube will be showing. There is only one Z and one X and they happen to be on the same cube, so no round can have both a Z and an X in play simultaneously, which means that he word "zax" can never be formed.&nbsp;&nbsp;By the way, a zax is a knife for splitting roof slate.&nbsp;&nbsp;It's a great word to know for scrabble and othe word games; it just won't help you in Big Boggle.<br><br>In the provided workbook, write a procedure that completes the assignment by making use of the 5 by 5 grid on the sheet named "Boggle".&nbsp;&nbsp; Be sure there is exactly one letter from each "cube" showing in each cell of the grid. The positioning of each cube within the grid should also be random. <br><br>You must make use of at least one array as a fundamental part of your solution.&nbsp;&nbsp;Your solution must be built entirely in VBA. That is, you may not write data to a worksheet to build your solution nor may your solution read data from any worksheet.&nbsp;&nbsp;<br><br>Hint:&nbsp;&nbsp;Notice that there is a range named "game" on the "Boggle" sheet.&nbsp;&nbsp;Remember that you can refer to a named range with the following syntax:<br><br>Range("game")<br><br>Also remember that you can refer to cells in a range with a single index with the "cells" method.&nbsp;&nbsp;So, even though the "game" range is a 5x5 grid, you can easily put a value in the 17th cell (row 4, column 2) with the following syntax:<br><br>Range("game").cells(17).value="A"<br><br>Note:&nbsp;&nbsp;Technically, one cube face has two letters on it: Qu.&nbsp;&nbsp;For this assignment you may ignore this inconsistency and just put a "Q" on that face.&nbsp;&nbsp;However, if you are up to the challenge, see if you can make a "u" always go with the "Q."&nbsp;&nbsp;Accomplishing this will not earn you any points but it will give you great satisfaction.
+10</td><td class=ee>
+Data about volunteers can be found on the sheet named "Volunteer."&nbsp;&nbsp; On the volunteer form (frmVolunteer), there are already several textboxes.&nbsp;&nbsp;These are used to edit a volunteer’s first name, last name, address, email address, and phone numbers.<br><br>Modify the Volunteer form so that when it is opened (initialized), the textboxes on the form are filled with the appropriate data for the volunteer whose information is on the row with the active cell.
+</td></tr>
+<tr><td class="task">3</td><td class="ee points">
+4</td><td class=ee>
+Modify the Volunteer form so that when it is opened, the checkBox labeled "Has Period Attire" is checked when the column M for the current row shows "Yes".&nbsp;&nbsp;When Column M reads "No", the checkBox should be unchecked and when Column M is blank, the checkBox should should a light grey check (accomplish this by setting the checkBox's value property to an empty string).
+</td></tr>
+<tr><td class="task">4</td><td class="ee points">
+10</td><td class=ee>
+Modify the Volunteer form so that when it is opened, the comboBox labeled "Cell Carrier" has a list populated from the list of carriers in column A of the "Carriers" sheet.&nbsp;&nbsp; 
+</td></tr>
+<tr><td class="task">5</td><td class="ee points">
+10</td><td class=ee>
+Modify the Volunteer form so that when it is opened, the comboBox labeled "Cell Carrier" shows the value from column K for the current row.
+</td></tr>
+<tr><td class="task">6</td><td class="ee points">
+4</td><td class=ee>
+Modify the Volunteer form so that when it is opened, the option button group labeled "Preferred" has an appropriately selected option depending on the value in column L for the current row.&nbsp;&nbsp; If no preferred contact method is recorded in column L, none of the option buttons should be selected.
+</td></tr>
+<tr><td class="task">7</td><td class="ee points">
+8</td><td class=ee>
+Modify the Volunteer form so that when it is opened, the listBox labeled "Areas of Interest" Shows all values located below cell B1 on the "Areas" sheet.&nbsp;&nbsp;Your code should read the values from the area sheet so that when changes are made to the list of areas, the form shows the complete list the next time the form is opened.&nbsp;&nbsp;Your list box should contain the area names, not the area numbers as shown below.&nbsp;&nbsp;You can assume that the area numbers will be contiguous starting with one.<br>
+<br><center><img src=areasOfInterset.gif></center></td></tr>
+<tr><td class="task">8</td><td class="ee points">
+5</td><td class=ee>
+Column N of the "Volunteers" worksheet records the areas that volunteers have expressed interest in.&nbsp;&nbsp;The numbers in this column refer to the Area Number shown in Column A of the "Areas" worksheet.&nbsp;&nbsp;So, a volunteer who has "2,4,12" in Column N has expressed interest in helping the Baker, the Blacksmith and the Cooper.<br><br>Modify the Volunteer form so that when it is opened, the listBox labeled "Areas of Interest" highlights (selects) the appropriate Areas of Interest as recorded in Column N of the "Volunteers" worksheet.<br>
+</td></tr>
+<tr><td class="task">9</td><td class="ee points">
+5</td><td class=ee>
+Modify the form so when the user clicks the "Cancel" button, all changes to data made on the form are discarded and the form is closed. 
+</td></tr>
+<tr><td class="task">10</td><td class="ee points">
+20</td><td class=ee>
+Modify the form so when the user clicks the "OK" button, all data are saved to the appropriate columns of the "Volunteers" worksheet and the form is closed.
+</td></tr>
+<tr><td class="task">11</td><td class="ee points">
+4</td><td class=ee>
+Add Code to the form so that when the user clicks "OK" the program checks to be sure that there is a value provided for the First Name.&nbsp;&nbsp; If no value is provided, the user should be alerted by a message box that displays an appropriate message.&nbsp;&nbsp; When the message box is dismissed, data should not be saved until the user provides a value and clicks "OK" again.<br><br>For this task, you should use the "MessageBox" function that is provided in the Workbook.&nbsp;&nbsp;It is defined on the RibbonX module, but you should not need to refer to it because it works the same as the built-in msgbox function.&nbsp;&nbsp;The difference is that the built in msgBox function will halt the operation of the automatic grader, while the MessageBox function is designed to work with the grader.
+</td></tr>
+<tr><td class="task">12</td><td class="ee points">
+4</td><td class=ee>
+Add Code to the form so that when the user clicks "OK" the program checks to be sure that there is a value provided for the Last Name.&nbsp;&nbsp; If no value is provided, the user should be alerted by a message box that displays an appropriate message.&nbsp;&nbsp; When the message box is dismissed, data should not be saved until the user provides a value and clicks "OK" again.<br><br>For this task, you should use the "MessageBox" function that is provided in the Workbook.&nbsp;&nbsp;It is defined on the RibbonX module, but you should not need to refer to it because it works the same as the built-in msgbox function.&nbsp;&nbsp;The difference is that the built in msgBox function will halt the operation of the automatic grader, while the MessageBox function is designed to work with the grader.
+</td></tr>
+<tr><td class="task">13</td><td class="ee points">
+4</td><td class=ee>
+Add Code to the form so that when the user clicks "OK" the program checks to be sure that if a Cell Carrier is specified, a Cell Phone Number is also provided.&nbsp;&nbsp; If not, the user should be alerted by a message box that displays an appropriate message.&nbsp;&nbsp; When the message box is dismissed, data should not be saved until the user provides a value and clicks "OK" again.<br><br>For this task, you should use the "MessageBox" function that is provided in the Workbook.&nbsp;&nbsp;It is defined on the RibbonX module, but you should not need to refer to it because it works the same as the built-in msgbox function.&nbsp;&nbsp;The difference is that the built in msgBox function will halt the operation of the automatic grader, while the MessageBox function is designed to work with the grader.
 </td></tr>
 <tr><td class=ee>Total:</td><td class="ee points">
-80
+90
 </td><td class=ee>
 </td></tr>
 </table>
